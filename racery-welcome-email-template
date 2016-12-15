@@ -23,7 +23,8 @@
             {% if race.has_teams %}<li>Your team has a fundraising link too: <a href="{{ user.teamurl_in_race }}">{{ user.teamurl_in_race }}</a>!</li>{% endif %}</ul>{% endif %} 
 
     <li>{% if race.has_teams %}Even if your team is full, you can still{% endif %} Invite others to join you. Below is some sample text to share on your blog, Facebook, Twitter or in an email.</li>
-    
+   
+   
     {% if race.has_teams %}<li>When your team crosses, keep submitting individual mileage! Those leaderboards will continue to matter until the race officially closes! Keep that competition alive ;)</li>{% endif %}<br> 
 
 <div align="justified;" style="border:3px; border-style:solid; border-color:#177fa5; padding: 1em;"><i>
