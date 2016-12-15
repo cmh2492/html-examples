@@ -1,7 +1,7 @@
 
-/* Template Subject:/* Next steps for {{ race.title }}{% if race.charity %} raising money for {{ race.charity.name }}{% endif %}!
+<!--Template Subject--> Next steps for {{ race.title }}{% if race.charity %} raising money for {{ race.charity.name }}{% endif %}!
 
-
+<!-- Email Template Body-->
 {% email_template "HeaderWelcomeToRace" %}
 
 <center>When the virtual race starts on <strong>{{ race.start_date }}</strong>, all you have to do is log your activity on the <a href="{{ race.url }}">race page</a> or in the <a href="https://itunes.apple.com/app/id1041763877">app</a> (iOS only for now)!</center><br>
