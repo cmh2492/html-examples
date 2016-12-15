@@ -41,8 +41,7 @@ Here’s how it works:
         <li>Log your miles on the race <a href="{{ race.url }}">page</a> or in the app: <a href="https://itunes.apple.com/app/id1041763877">https://itunes.apple.com/app/id1041763877</a> -- iOS only for now.</li> 
 		<li>Racery will keep track of fun stats like your total mileage, {{ race.sport.noun_plural }}/week, and streaks!</li>
     </ol></i></div>
-</ul>
-        
+</ul>        
         
 ______________________________<br><br>
 
