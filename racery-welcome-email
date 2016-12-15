@@ -1,0 +1,60 @@
+
+/* Template Subject:/* Next steps for {{ race.title }}{% if race.charity %} raising money for {{ race.charity.name }}{% endif %}!
+
+
+{% email_template "HeaderWelcomeToRace" %}
+
+<center>When the virtual race starts on <strong>{{ race.start_date }}</strong>, all you have to do is log your activity on the <a href="{{ race.url }}">race page</a> or in the <a href="https://itunes.apple.com/app/id1041763877">app</a> (iOS only for now)!</center><br>
+
+<strong>Some handy tips to make sure you get the most out of your Racery experience:</strong><br>
+
+<ul>
+    {% if race.has_bibs %}<li>Download your bib, share it (#racery), print it, frame it: <a href="{{ user.bib_download_url_in_race }}">{{ user.bib_download_url_in_race }}</a></li>{% endif %}
+
+    <li>Fill out your bio: <a href="{{ site.url }}/{{ user.username }}">{{ site.url }}/{{ user.username }}</a></li>
+    
+    {% if race.has_teams %}<li>If your team still has open spots, you can invite friends to join by sharing your team’s unique link: <a href="{{ user.teamurl_in_race }}">{{ user.teamurl_in_race }}</a></li>{% endif %} 
+
+    {% if race.has_volunteering %}<li>When the virtual race begins, log your volunteer hours in the Log Activity tab (same place you log your miles!)</li>{% endif %}
+
+	{% if race.charity %}<li>You can start fundraising at ANY TIME. Invite people to contribute. Here’s your personal fundraising link: <a href="{{ race.url }}#@{{ user.username }}">{{ race.url }}#@{{ user.username }}</a>!</li>
+    
+    	<ul>
+            {% if race.has_teams %}<li>Your team has a fundraising link too: <a href="{{ user.teamurl_in_race }}">{{ user.teamurl_in_race }}</a>!</li>{% endif %}</ul>{% endif %} 
+
+    <li>{% if race.has_teams %}Even if your team is full, you can still{% endif %} Invite others to join you. Below is some sample text to share on your blog, Facebook, Twitter or in an email.</li>
+    
+    {% if race.has_teams %}<li>When your team crosses, keep submitting individual mileage! Those leaderboards will continue to matter until the race officially closes! Keep that competition alive ;)</li>{% endif %}<br> 
+
+<div align="justified;" style="border:3px; border-style:solid; border-color:#177fa5; padding: 1em;"><i>
+    <strong>Twitter:</strong> I just joined a @raceryapp’s virtual race from {{ route.start }} to {{ route.finish }}! Join me! {{ race.url }}<br><br>
+
+    <strong>Blog, Facebook, Newsletter:</strong><br><br>
+
+Join my virtual race: {{ race.url }}!<br>
+I’m virtually {{ race.sport.verb_passive }} {{ route.distance }} miles from {{ route.start }} to {{ route.finish }}!!<br><br>
+
+Here’s how it works:
+    <ol>
+        <li>Sign up with your name and email.</li>
+        <li>You can {{ race.sport.verb }} anywhere, logging miles with any kind of device.</li>
+        <li>Log your miles on the race <a href="{{ race.url }}">page</a> or in the app: <a href="https://itunes.apple.com/app/id1041763877">https://itunes.apple.com/app/id1041763877</a> -- iOS only for now.</li> 
+		<li>Racery will keep track of fun stats like your total mileage, {{ race.sport.noun_plural }}/week, and streaks!</li>
+    </ol></i></div>
+</ul>
+        
+        
+______________________________<br><br>
+
+Check out the racer experience in this short video: <a href="https://vimeo.com/164173977">https://vimeo.com/164173977</a><br><br>
+
+We’ll let you know when the race is about to start!<br><br> 
+
+If you have any questions:<br><br>
+
+    <strong>See our FAQ page: <a href="{{ site.url }}/faq/">{{ site.url }}/faq/</a></strong><br>
+<strong>OR give us a shout at <a href="mailto:team@{{ site.domain }}">team@{{ site.domain }}</a>!</strong><br><br>
+
+
+Enjoy the race!<br>
+The Racery Team
